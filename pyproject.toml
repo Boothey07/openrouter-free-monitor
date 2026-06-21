@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openrouter-free-monitor"
+version = "0.1.0"
+description = "Monitor OpenRouter free models, catch expirations and removals before they break your routing chain."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "boothey07", email = "boothey07@users.noreply.github.com" }]
+keywords = ["openrouter", "llm", "monitoring", "free-models", "routing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "responses>=0.24",
+]
+telegram = [
+    "requests>=2.31",
+]
+
+[project.scripts]
+openrouter-fm = "openrouter_free_monitor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Boothey07/openrouter-free-monitor"
+Issues = "https://github.com/Boothey07/openrouter-free-monitor/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+openrouter_free_monitor = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"

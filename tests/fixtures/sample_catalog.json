@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": "free/model-a:free",
+      "canonical_slug": "free/model-a",
+      "name": "Model A (free)",
+      "created": 1735689600,
+      "description": "Test fixture A",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": ["text"],
+        "output_modalities": ["text"]
+      },
+      "pricing": {"prompt": "0", "completion": "0"},
+      "top_provider": {"name": "TestProvider"},
+      "expiration_date": null,
+      "knowledge_cutoff": "2025-08-01"
+    },
+    {
+      "id": "free/model-b:free",
+      "canonical_slug": "free/model-b",
+      "name": "Model B (free)",
+      "created": 1735776000,
+      "description": "Test fixture B with future expiration",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": ["text", "image"],
+        "output_modalities": ["text"]
+      },
+      "pricing": {"prompt": "0", "completion": "0"},
+      "top_provider": {"name": "OpenInference"},
+      "expiration_date": "2026-12-31T00:00:00Z"
+    },
+    {
+      "id": "paid/model-x",
+      "canonical_slug": "paid/model-x",
+      "name": "Model X (paid)",
+      "created": 1735862400,
+      "description": "Test fixture X is paid",
+      "context_length": 200000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": ["text"],
+        "output_modalities": ["text"]
+      },
+      "pricing": {"prompt": "0.000003", "completion": "0.000012"},
+      "top_provider": {"name": "PaidProvider"},
+      "expiration_date": null
+    },
+    {
+      "id": "free/model-expiring-soon:free",
+      "canonical_slug": "free/model-expiring-soon",
+      "name": "Model C (expires soon)",
+      "created": 1717200000,
+      "description": "Test fixture C with near-term expiration",
+      "context_length": 32768,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": ["text"],
+        "output_modalities": ["text"]
+      },
+      "pricing": {"prompt": "0", "completion": "0"},
+      "top_provider": {"name": "TestProvider"},
+      "expiration_date": null
+    }
+  ]
+}

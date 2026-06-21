@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenRouter free-model monitor — hourly poll
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=-/etc/openrouter-fm.env
+ExecStart=/root/.hermes/venv/bin/openrouter-fm poll
+WorkingDirectory=/var/lib/openrouter-fm
+StandardOutput=append:/var/log/openrouter-fm.log
+StandardError=append:/var/log/openrouter-fm.log
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
