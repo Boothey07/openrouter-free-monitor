@@ -1,6 +1,6 @@
 name: CI
 
-# Central definitions: Boothey07/ci-workflows, pinned to v1.2.
+# Central definitions: Boothey07/ci-workflows, pinned to v1.4.
 # pull_request only — adding `push` too would double-bill every PR.
 on:
   pull_request:
@@ -14,13 +14,13 @@ permissions:
 
 jobs:
   hygiene:
-    uses: Boothey07/ci-workflows/.github/workflows/pr-hygiene.yml@v1.2
+    uses: Boothey07/ci-workflows/.github/workflows/pr-hygiene.yml@v1.4
 
   secrets:
-    uses: Boothey07/ci-workflows/.github/workflows/secrets.yml@v1.2
+    uses: Boothey07/ci-workflows/.github/workflows/secrets.yml@v1.4
 
   python:
-    uses: Boothey07/ci-workflows/.github/workflows/python-ci.yml@v1.2
+    uses: Boothey07/ci-workflows/.github/workflows/python-ci.yml@v1.4
     with:
       paths: "."
       python-versions: '["3.12"]'
