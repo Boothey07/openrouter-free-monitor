@@ -17,7 +17,7 @@ jobs:
     uses: Boothey07/ci-workflows/.github/workflows/pr-hygiene.yml@v1.4
 
   secrets:
-    uses: Boothey07/ci-workflows/.github/workflows/secrets.yml@v1.4
+    uses: Boothey07/ci-workflows/.github/workflows/secrets.yml@v1.5
 
   python:
     uses: Boothey07/ci-workflows/.github/workflows/python-ci.yml@v1.4
