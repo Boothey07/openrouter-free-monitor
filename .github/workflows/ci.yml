@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   hygiene:
-    uses: Boothey07/ci-workflows/.github/workflows/pr-hygiene.yml@v1.4
+    uses: Boothey07/ci-workflows/.github/workflows/pr-hygiene.yml@v1.5
 
   secrets:
     uses: Boothey07/ci-workflows/.github/workflows/secrets.yml@v1.4
